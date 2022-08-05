@@ -2,6 +2,7 @@
 const express = require('express');
 const router = express.Router();
 
+//GET /tasks
 router.get('/', (req, res) => {
 
     res.send('get all tasks');
