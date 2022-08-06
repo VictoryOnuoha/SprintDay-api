@@ -12,14 +12,14 @@ app.use(express.json());
 app.use(cors());
 
 //Validate that we are recieving JSON data from user
-app.use((req, res, next => {
-    
+app.use((req, res, next ) => {
+    console.log('request headers:', req.headers)
     if (req.method === 'POST' && req.headers['content-type'] !== 'application/json') {
         res.status(400).send('Server requires application/json');
     }else {
         next();
     }
-}))
+})
 
 //Routes
 app.use('/projects', projectRoutes);

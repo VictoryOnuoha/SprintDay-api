@@ -1,5 +1,5 @@
 const fs = require('fs');
-const { v4: uuidv4 } = require('uuid');
+const { v4: uuid } = require('uuid');
 
 // Read project data 
 const readProjects = () => {
@@ -14,16 +14,46 @@ const writeProjects = (projectsData) => {
 }
 
 // get projects
-const getProjects = () => {
+const getAllProjects = () => {
     return readProjects();
 }
 
-// get project with specific id
-const getProjectFiltered = () => {
+// get a project with specific id
+const getAllProjectFiltered = () => {
     return readProjects().map(project => {
         return {
             id: project.id,
-            
+            name: project.name
         }
     })
+}
+
+const getIndividualProject = (projectId) => {
+    const projectData = readProjects();
+    const singleProject = projectData.find(note => note.id === noteId);
+    return singleProject;
+}
+
+const createProject = (projectData) => {
+    const projectData = readProjects();
+
+    const newProject = {
+        id: uuid(),
+        name: projectData.name,
+        goal: projectData.goal,
+        due: projectData.due,
+        priority: projectData.priority,
+        status: projectData.status
+    }
+
+    projectData.push(newProject);
+    writeProjects(projectData);
+    return newProject;
+}
+
+module.exports = {
+    getAllProjects,
+    getAllProjectFiltered,
+    getIndividualProject,
+    createProject
 }
