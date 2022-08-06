@@ -10,5 +10,48 @@ const getAll = (req, res) => {
 const getIndividual = (req, res) => {
     const project = projectsModel.getIndividualProject(req.params.id);
     res.status(200).json(project);
+};
+
+const updateOne = (req, res) => {
+    const project = projectsModel.updateProject(req.params.id, req.body);
+    if (
+        project.name === '' ||
+        project.goal === '' ||
+        project.due === '' || // verify this logic
+        project.priority === '' || // verify this logic
+        project.status === ''
+    ) {
+        return res
+                .status(400)
+                .send('All fields are required. Please complete all fields in this form ');
+    } res.status(200).json(project);
+
+};
+
+const createOne = (req, res) => {
+    const projectDetails = req.body;
+
+    if (
+        !projectDetails.name ||
+        !projectDetails.goal ||
+        !projectDetails.due ||
+        !projectDetails.priority ||
+        !projectDetails.status
+    ) {
+        return res
+        .status(400)
+        .send(
+            'All fields are required. Please complete all fields in this form'
+        );
+    }
+    const projects = projectsModel.createProject(projectDetails);
+    res.status(200).json(projects);
+};
+
+module.exports = {
+    getAll,
+    getIndividual,
+    createOne,
+    updateOne
 }
 
