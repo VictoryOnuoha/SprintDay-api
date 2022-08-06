@@ -1,23 +1,17 @@
 //Initialize server & routing
 const express = require('express');
 const router = express.Router();
+const projectController = require('../controllers/projectsController');
 
 //GET /projects
-router.get('/', (req, res) => {
+router.get('/', projectController.getAll);
 
-    res.send('get all projects');
-});
-
-
-router.post('/', (req, res) => {
-
-    res.send('create new project');
-})
+router.post('/', projectController.createOne )
 
 // update a project
-router.put('/:projectid');
+router.put('/:projectId', projectController.updateOne);
 
 // delete a project
-router.delete('/:projectid');
+router.delete('/:projectId');
 
 module.exports = router;

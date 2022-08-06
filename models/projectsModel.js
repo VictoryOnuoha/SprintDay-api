@@ -48,22 +48,22 @@ const updateProject = (id, body) => {
     return projects[i];
 };
 
-const createProject = (projectData) => {
+const createProject = (projectDetails) => {
     const projectData = readProjects();
 
     const newProject = {
         id: uuid(),
-        name: projectData.name,
-        goal: projectData.goal,
-        due: projectData.due,
-        priority: projectData.priority,
-        status: projectData.status
+        name: projectDetails.name,
+        goal: projectDetails.goal,
+        due: projectDetails.due,
+        priority: projectDetails.priority,
+        status: projectDetails.status
     }
 
     projectData.push(newProject);
     writeProjects(projectData);
     return newProject;
-}
+};
 
 module.exports = {
     getAllProjects,
