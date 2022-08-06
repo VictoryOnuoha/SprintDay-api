@@ -30,9 +30,23 @@ const getAllProjectFiltered = () => {
 
 const getIndividualProject = (projectId) => {
     const projectData = readProjects();
-    const singleProject = projectData.find(note => note.id === noteId);
+    const singleProject = projectData.find(project => project.id === projectId);
     return singleProject;
 }
+
+const updateProject = (id, body) => {
+    const projects = getAllProjects();
+    const projectId = id;
+    let index = projects.findIndex((project) => project.id === projectId);
+    projects[index].name = body.name;
+    projects[index].goal = body.goal;
+    projects[index].due = body.due;
+    projects[index].priority = body.priority;
+    projects[index].status = body.status
+   
+    writeProjects(getAllProjects);
+    return projects[i];
+};
 
 const createProject = (projectData) => {
     const projectData = readProjects();
@@ -55,5 +69,6 @@ module.exports = {
     getAllProjects,
     getAllProjectFiltered,
     getIndividualProject,
-    createProject
+    createProject,
+    updateProject
 }
