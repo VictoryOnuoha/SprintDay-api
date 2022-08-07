@@ -9,6 +9,9 @@ const getAll = (req, res) => {
 
 const getIndividual = (req, res) => {
     const project = projectsModel.getIndividualProject(req.params.id);
+    if (!project) {
+        return res.status(404).send('Project not found');
+    }
     res.status(200).json(project);
 };
 
@@ -41,7 +44,7 @@ const createOne = (req, res) => {
         return res
         .status(400)
         .send(
-            'All fields are required. Please complete all fields in this form'
+            'All fields are required. Please complete all fields'
         );
     }
     const projects = projectsModel.createProject(projectDetails);

@@ -1,6 +1,7 @@
 //Initialize server & routing
 const express = require('express');
 const router = express.Router();
+const taskController = require('../controllers/tasksController');
 
 //GET /tasks
 router.get('/', (req, res) => {
