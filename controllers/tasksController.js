@@ -13,7 +13,7 @@ const getIndividual = (req, res) => {
         res.status(404).send('Task not found')
     }
     res.status(200).json(task);
-}
+};
 
 const createOne = (req, res) => {
     const taskDetails = req.body;

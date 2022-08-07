@@ -6,6 +6,8 @@ const projectController = require('../controllers/projectsController');
 //GET /projects
 router.get('/', projectController.getAll);
 
+//GET /projectId
+
 router.post('/', projectController.createOne )
 
 // update a project
