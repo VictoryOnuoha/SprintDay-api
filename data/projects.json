@@ -13,17 +13,17 @@
             "column-1": {
                 "id": "29ab1198-f8e9-4ae1-8125-728e0516f1ea",
                 "title": "ACTIVE",
-                " projectsIds": ["project-1", "project-2", "project-3", "project-4"]
+                "projectsIds": ["project-1", "project-2", "project-3", "project-4"]
             },
             "column-2": {
                 "id": "41d87fdc-c046-48d7-8994-9e284282a91c",
                 "title": "YET TO START",
-                "taskIds": ["project-1", "project-2", "project-3", "project-4"]
+                "projectsIds": ["project-1", "project-2", "project-3", "project-4"]
             },
             "column-3": {
                 "id": "b86765a6-c0e0-4d6f-9334-b410676f2adc",
                 "title": "COMPLETED",
-                "taskIds": ["project-1", "project-2", "project-3", "project-4"]
+                "projectsIds": ["project-1", "project-2", "project-3", "project-4"]
             }
         },
         "columnOrder": ["column-1","column-2", "column-3"]
