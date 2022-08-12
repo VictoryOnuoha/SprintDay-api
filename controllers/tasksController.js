@@ -33,7 +33,7 @@ const createOne = (req, res) => {
     res.status(200).json(tasks);
 };
 
-module.export = {
+module.exports = {
     getAll,
     getIndividual,
     createOne,

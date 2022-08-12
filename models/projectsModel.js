@@ -53,11 +53,7 @@ const createProject = (projectDetails) => {
 
     const newProject = {
         id: uuid(),
-        name: projectDetails.name,
-        goal: projectDetails.goal,
-        due: projectDetails.due,
-        priority: projectDetails.priority,
-        status: projectDetails.status
+        content: projectDetails.content
     }
 
     projectData.push(newProject);

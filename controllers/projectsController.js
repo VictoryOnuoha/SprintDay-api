@@ -18,11 +18,7 @@ const getIndividual = (req, res) => {
 const updateOne = (req, res) => {
     const project = projectsModel.updateProject(req.params.id, req.body);
     if (
-        project.name === '' ||
-        project.goal === '' ||
-        project.due === '' || // verify this logic
-        project.priority === '' || // verify this logic
-        project.status === ''
+        project.content === '' 
     ) {
         return res
                 .status(400)
@@ -35,11 +31,7 @@ const createOne = (req, res) => {
     const projectDetails = req.body;
 
     if (
-        !projectDetails.name ||
-        !projectDetails.goal ||
-        !projectDetails.due ||
-        !projectDetails.priority ||
-        !projectDetails.status
+        !projectDetails.content 
     ) {
         return res
         .status(400)
