@@ -1,6 +1,5 @@
 # SprintDay-api
 The backend data and server for Sprint Day - a task management software for the busy bees 
-`BACKEND FOR SPRINTDAY`
 See: https://github.com/VictoryOnuoha/SprintDay
 
 
