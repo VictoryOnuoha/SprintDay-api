@@ -52,7 +52,7 @@ const createProject = (projectDetails) => {
     const projectData = readProjects();
 
     const newProject = {
-        id: uuid(),
+        // id: uuid(),
         content: projectDetails.content
     }
 
