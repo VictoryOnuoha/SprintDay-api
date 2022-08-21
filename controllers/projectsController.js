@@ -29,6 +29,7 @@ const updateOne = (req, res) => {
 
 const createOne = (req, res) => {
     const projectDetails = req.body;
+    console.log('This is', projectDetails);
     if (
         !projectDetails.content 
     ) {
