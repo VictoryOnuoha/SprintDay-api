@@ -48,7 +48,7 @@ To deploy this project run
 
 ```bash
   npm start (on frontend)
-  npm nodemon server.js (on backend)
+  npm start (on backend)
 ```
 
 
