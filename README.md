@@ -47,8 +47,9 @@ SPRINTDAY will help them focus and stay organized by tracking their goals using 
 To deploy this project run
 
 ```bash
-  npm start (on frontend)
-  npm start (on backend)
+ Run `npm install` to install the necessary dependencie
+  `npm start` (on frontend)
+  npm start (on backend) to start the server
 ```
 
 
