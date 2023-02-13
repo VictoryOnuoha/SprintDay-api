@@ -48,8 +48,8 @@ To deploy this project run
 
 ```bash
  Run `npm install` to install the necessary dependencie
-  `npm start` (on frontend)
-  npm start (on backend) to start the server
+  `npm start` (on frontend called SprintDay)
+  `npm start` (on backend) to start the server
 ```
 
 
@@ -63,6 +63,13 @@ To run this project, you will need to add the following environment variables to
 `PORT=8080` 
 
 `CLIENT_URL=http://localhost:3000`
+
+##Error Handling
+If an error occurs while processing a request, the server will respond with a JSON object 
+containing an error message and a status code indicating the type of error.
+
+##Contributing
+If you'd like to contribute to this project, feel free to submit a pull request.
 
 ## LIVE PREVIEW 
 ![sprint day task page](https://user-images.githubusercontent.com/34638854/195739875-c8ef9526-218d-4506-aa5f-7f8b8cf21454.png)
