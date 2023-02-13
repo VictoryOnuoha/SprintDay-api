@@ -68,7 +68,7 @@ To run this project, you will need to add the following environment variables to
 If an error occurs while processing a request, the server will respond with a JSON object 
 containing an error message and a status code indicating the type of error.
 
-##Contributing
+## Contributing
 If you'd like to contribute to this project, feel free to submit a pull request.
 
 ## LIVE PREVIEW 
