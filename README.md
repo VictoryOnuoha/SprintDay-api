@@ -64,7 +64,7 @@ To run this project, you will need to add the following environment variables to
 
 `CLIENT_URL=http://localhost:3000`
 
-##Error Handling
+## Error Handling
 If an error occurs while processing a request, the server will respond with a JSON object 
 containing an error message and a status code indicating the type of error.
 
